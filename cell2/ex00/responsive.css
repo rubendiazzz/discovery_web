@@ -1,0 +1,27 @@
+table {
+	height: auto;
+}
+
+#first-cell {
+	background-color: rgb(139, 217, 139);
+	width: 50vw;
+	height: 100vh;
+}
+
+#second-cell {
+	background-color: rgb(240, 155, 119);
+	width: 50vw;
+	height: 100vh;
+}
+
+@media (max-width: 768px) {
+	table {
+		height: auto;
+	}
+
+	#first-cell,
+	#second-cell {
+		width: 50vh;
+		height: 100vh;
+	}
+}

@@ -1,0 +1,46 @@
+body {
+	background-color: pink;
+}
+
+.nav-title {
+	color: white;
+	font-size: 24px;
+	text-align: center;
+}
+
+.special-title {
+	color: white;
+	font-size: 48px;
+	text-align: center;
+}
+
+.image-container {
+	display: flex;
+	justify-content: center;
+}
+
+.image-container img {
+	width: 200px;
+	height: 200px;
+	margin: 10px;
+}
+
+.link-container {
+	display: flex;
+	justify-content: center;
+}
+
+.link-container a {
+	margin: 5px;
+}
+
+.horizontal-line {
+	border-top: 1px solid black;
+	margin: 20px 0;
+}
+
+.footer {
+	text-align: right;
+	font-style: italic;
+	font-family: monospace;
+}
