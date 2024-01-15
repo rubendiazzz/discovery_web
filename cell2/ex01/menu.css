@@ -6,19 +6,21 @@
 
 body {
     font-family: Arial, sans-serif;
-    padding: 20px;
+    background: #eee;
 }
 
 .container {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .dropdown-menu {
-    background: none;
+    background-color: #f0f0f0;
     border: none;
     cursor: pointer;
-    padding: 10px;
-    position: relative;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,55 +32,72 @@ body {
     height: 3px;
     background-color: black;
     position: relative;
-    transition: all 0.3s ease-in-out;
+    z-index: 2000;
 }
 
 .hamburger:before,
 .hamburger:after {
     content: '';
-    position: absolute;
-    width: 100%;
+    display: block;
+    width: 30px;
     height: 3px;
-    background
+    background-color: black;
+    position: absolute;
+    transition: all 0.2s;
 }
 
-
 .hamburger:before {
-    top: -10px;
+	top: -8px;
 }
 
 .hamburger:after {
-    bottom: -10px;
-}
-
-.menu-items {
-    display: none;
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 1000;
-}
-
-.menu-items ul {
-    list-style: none;
-}
-
-.menu-items ul li {
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
-}
-
-.menu-items ul li:hover {
-    background-color: #f0f0f0;
+top: 8px;
 }
 
 .menu-toggle {
-    display: none;
+position: absolute;
+opacity: 0;
+z-index: -1;
 }
 
-.menu-toggle:checked ~ .menu-items {
-    display: block;
+.menu-items {
+display: none;
+position: absolute;
+top: 40px;
+left: 0;
+width: 100%;
+background: #ffffff;
+box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+z-index: 1000;
+}
+
+.menu-items ul {
+list-style: none;
+}
+
+.menu-items ul li {
+padding: 10px 20px;
+border-bottom: 1px solid #ddd;
+}
+
+.menu-items ul li:hover {
+background-color: #f0f0f0;
+}
+
+.menu-toggle:checked + .dropdown-menu + .menu-items {
+display: block;
+}
+
+.menu-toggle:checked + .dropdown-menu .hamburger:before {
+transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle:checked + .dropdown-menu .h
+
+amburger:after {
+transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.menu-toggle:checked + .dropdown-menu .hamburger {
+background-color: transparent;
 }
