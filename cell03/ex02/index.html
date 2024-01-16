@@ -1,11 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ToDo Manager | Piscine Discovery Web</title>
 </head>
+<style>
+	body {
+		font-family: Arial, sans-serif;
+		background-color: #f2f2f2;
+	}
+
+	.container {
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 20px;
+		background-color: #fff;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		border-radius: 5px;
+	}
+
+	.header {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.header h2 {
+		color: #333;
+	}
+
+	.todo-input {
+		display: flex;
+		margin-bottom: 20px;
+	}
+
+	.todo-input input {
+		flex: 1;
+		padding: 10px;
+		border: none;
+		border-radius: 5px;
+		font-size: 16px;
+	}
+
+	.todo-input button {
+		padding: 10px 20px;
+		background-color: #4CAF50;
+		color: #fff;
+		border: none;
+		border-radius: 5px;
+		font-size: 16px;
+		cursor: pointer;
+	}
+
+	.todo-list {
+		list-style-type: none;
+		padding: 0;
+	}
+
+	.todo-item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px;
+		padding: 10px;
+		background-color: #f9f9f9;
+		border-radius: 5px;
+	}
+
+	.todo-item.checked {
+		background-color: #888;
+		color: #fff;
+		text-decoration: line-through;
+	}
+
+	.todo-item.checked .checkmark {
+		background-color: #fff;
+	}
+
+	.todo-item .checkmark {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		margin-right: 10px;
+		border: 1px solid #ccc;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+
+	.todo-item .checkmark::after {
+		content: "";
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 10px;
+		height: 10px;
+		background-color: #4CAF50;
+		border-radius: 50%;
+	}
+
+	.todo-item.checked .checkmark::after {
+		display: block;
+	}
+
+	.todo-item .close {
+		margin-left: auto;
+		padding: 5px;
+		background-color: #f44336;
+		color: #fff;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+	.todo-item .close:hover {
+		background-color: #d32f2f;
+	}
+</style>
 <body>
-		
+	<div class="container">
+		<div class="header">
+			<h2>My To Do List</h2>
+		</div>
+		<div class="todo-input">
+			<input type="text" id="myInput" placeholder="Title...">
+			<button onclick="newElement()">Add</button>
+		</div>
+		<ul id="myUL" class="todo-list">
+			
+		</ul>
+	</div>
+	<script src="todo.js"></script>
 </body>
 </html>
