@@ -1,0 +1,47 @@
+body {
+	margin: 0;
+	overflow: auto;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+.parallax {
+	background-image: url("icecream_cone.jpg");
+
+	height: 100vh;
+
+	/* PARALLAX EFFECT */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.parallax2 {
+	background-image: url("spicy.jpg");
+
+	height: 100vh;
+
+	/* PARALLAX EFFECT */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.title {
+	font-size: 100px;
+	color: white;
+	text-align: center;
+}
+
