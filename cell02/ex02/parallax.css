@@ -45,3 +45,8 @@ body::-webkit-scrollbar {
 	text-align: center;
 }
 
+.title-2 {
+	font-size: 100px;
+	color: black;
+	text-align: center;
+}
