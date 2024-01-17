@@ -1,4 +1,6 @@
+-----------------------------------
 # 42 Piscine Discovery Web Projects
+-----------------------------------
 
 This repository contains a collection of web projects completed as part of the 42 Piscine Discovery program. The projects range from basic shell scripting with bash to creating simple static websites, culminating in the creation of a personal "portfolio" website.
 
@@ -26,3 +28,5 @@ To get started with these projects, follow the instructions provided in each pro
 - **cell02**: Introduction to JavaScript and DOM manipulation.
 - **cell03**: Creating a responsive website using CSS media queries.
 - **Final Rush**: Collaborative project to create a personal "portfolio" website showcasing skills and achievements.
+
+-----------------------------
