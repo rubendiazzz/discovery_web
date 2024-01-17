@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Calculator</title>
+    <title>Basic Calculator | Piscine Discovery Web</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<div class="header">
+		<h1>The best Calculator</h1>
+	</div>
     <div id="calculator">
         <input type="number" id="leftOperand" min="0">
         <select id="operator">
@@ -17,7 +20,11 @@
             <option value="%">%</option>
         </select>
         <input type="number" id="rightOperand" min="0">
-        <input type="button" value="Try me!" id="calculate">
+        <input type="button" value="Operate" id="calculate">
+		<div class="footer">
+			<p>© 2024. rdiaz-fr.</p>
+			<p class="cursive">piscine discovery web</p>
+		</div>
     </div>
     <script src="script.js"></script>
 </body>
