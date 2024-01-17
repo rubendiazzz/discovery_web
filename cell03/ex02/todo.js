@@ -29,10 +29,11 @@ function newElement() {
 	var inputValue = document.getElementById("myInput").value;
 	var t = document.createTextNode(inputValue);
 	li.appendChild(t);
-	if (inputValue === '') {
+	if (inputValue === "") {
 		alert("Tienes que escribir algo!");
 	} else {
-		document.getElementById("myUL").appendChild(li);
+		var ul = document.getElementById("myUL");
+		ul.insertBefore(li, ul.firstChild); // Insert the new item at the top
 	}
 	document.getElementById("myInput").value = "";
 
@@ -46,6 +47,13 @@ function newElement() {
 		close[i].onclick = function () {
 			var div = this.parentElement;
 			div.style.display = "none";
-		}
+		};
 	}
 }
+var input = document.getElementById("myInput");
+input.addEventListener("keydown", function(event) {
+	if (event.keyCode === 13) {
+		event.preventDefault();
+		newElement();
+	}
+});
