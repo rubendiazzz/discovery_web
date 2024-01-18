@@ -216,6 +216,7 @@ section {
 
 .profile:first-child {
     border-right: 2px solid #000; /* Change color as needed */
+	height: 100vh;
 }
 
 @media (max-width: 768px) {
