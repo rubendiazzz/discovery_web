@@ -1,14 +1,31 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	font-family: Arial, sans-serif;
+	background-color: bisque;
+}
+
+#about img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	/* Keep image proportions */
+	object-fit: cover;
+}
+
+h2 {
+	text-align: center;
 }
 
 nav {
-	background-color: #333;
+	background-color: #9d6565;
 	color: white;
-	position: fixed;
-	width: 100%;
+	width: 100vw;
 	top: 0;
 	z-index: 1000;
+	position: fixed;
 }
 
 nav ul {
@@ -25,6 +42,11 @@ nav ul li {
 nav ul li a {
 	color: white;
 	text-decoration: none;
+	font-size: 20px;
+}
+
+nav ul li a:hover {
+	color: #4ba5d972;
 }
 
 section {
@@ -32,6 +54,13 @@ section {
 	padding: 20px;
 	clear: both;
 }
+
+.container {
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(#f9f6efd4 1.1rem, #ccc 1.2rem);
+	background-size: 100% 1.2rem;
+  }
 
 #about {
 	text-align: center;
@@ -53,13 +82,38 @@ section {
 	margin: 10px;
 	padding: 10px;
 	width: calc(33% - 20px);
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+	background-color: rgba(151, 103, 51, 0.4);
 	border-radius: 8px;
+	height: auto;
 }
 
 .skill-category h3 {
 	text-align: center;
 	color: #333;
+	font-weight: 800;
+	font-size: 26px;
+}
+
+.skill-category p {
+	text-align: center;
+	color: #333;
+	font-weight: 600;
+	font-size: 20px;
+	margin: 4px 0;
+	text-align: center;
+	justify-content: center;
+	/* pretty align */
+	display: flex;
+	/* Align to the center of the div */
+	align-items: center;
+}
+
+#contact .to-find {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 700;
+	font-family: 'Courier New', Courier, monospace;
 }
 
 @media (max-width: 768px) {
