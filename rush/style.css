@@ -1,21 +1,11 @@
-:root {
-	--primary-color: #005f73;
-	--secondary-color: #0a9396;
-	--accent-color: #94d2bd;
-	--background-color: #e9d8a6;
-	--text-color: #001219;
-	--font-family: 'Montserrat', sans-serif;
-  }
-
 * {
 	box-sizing: border-box;
 }
 
 body {
-	font-family: var(--font-family);
-	color: var(--text-color);
-	background-color: var(--background-color);
-  }
+	font-family: Arial, sans-serif;
+	background-color: bisque;
+}
 
 h2 {
 	text-align: center;
@@ -207,6 +197,27 @@ section {
 	margin-top: auto;
 }
 
+.two-profiles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start; /* Align items from the top */
+}
+
+.profile {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically inside each profile */
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%; /* Each profile takes up half of the container width */
+    padding: 20px; /* Optional: for spacing */
+	box-sizing: border-box; /* to ensure padding does not affect width */
+}
+
+.profile:first-child {
+    border-right: 2px solid #000; /* Change color as needed */
+}
+
 @media (max-width: 768px) {
 	.skills {
 		flex-direction: column;
@@ -214,5 +225,39 @@ section {
 
 	.skill-category {
 		width: auto;
+	}
+
+	.two-profiles {
+        flex-direction: column;
+    }
+
+    .profile {
+        width: 100%; /* Each profile takes full width */
+        border-right: none; /* Remove the vertical line */
+    }
+
+    /* Your existing adjustments for smaller screens */
+    .skills {
+        flex-direction: column;
+    }
+
+    .skill-category {
+        width: auto;
+    }
+}
+
+@media (max-width: 500px) {
+	nav ul li {
+		display: block;
+		margin: 10px 0;
+	}
+
+	nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+	.profile:first-child {
+		border-right: 0px solid #000; /* Change color as needed */
 	}
 }
