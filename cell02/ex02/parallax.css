@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	overflow: auto;
-	-ms-overflow-style: none;
+	/* -ms-overflow-style: none; */
 	scrollbar-width: none;
 }
 
